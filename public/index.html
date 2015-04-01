@@ -1,83 +1,126 @@
-<!doctype html>
+<!DOCTYPE html>
+<html lang="{context.locality.language}">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=1000, initial-scale=1.0, maximum-scale=1.0">
+        <link rel="shortcut icon" sizes="196x196" href="https://www.paypalobjects.com/webstatic/icon/pp196.png" />
+        <link rel="shortcut icon" type="image/x-icon" href="https://www.paypalobjects.com/webstatic/icon/favicon.ico" />
+        <link rel="icon" type="image/x-icon" href="https://www.paypalobjects.com/webstatic/icon/pp32.png" />
+        <title>GPS Survey</title>
+        <link rel="stylesheet" href="/css/lib/bootstrap.min.css" />
+        <link rel="stylesheet" href="/css/lib/animate.min.css" />
+        <link rel="stylesheet" href="/css/flat-ui.min.css" />
+        <link rel="stylesheet" href="/css/app.css"/>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        
 
-<!-- ASSIGN OUR ANGULAR MODULE -->
-<html ng-app="scotchTodo">
-<head>
-	<!-- META -->
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1"><!-- Optimize mobile viewport -->
+	<div class="col-xs-13">
+	<input type=hidden id="_csrf" value={_csrf} />
+    <nav class="navbar navbar-inverse navbar-embossed" role="navigation">
+        <div class="navbar-header animated fadeIn">
+            <a class="navbar-brand" href="/reportgen"><i class="fa fa-users"></i>  Global Platform Services Survey Portal</a>
+        </div>
+        <div class="collapse navbar-collapse" id="navbar-collapse-01">
+            <ul class="nav navbar-nav navbar-left">
+              
+            </ul>
+            </div><!-- /.navbar-collapse -->
+            </nav><!-- /navbar -->
+        </div>
+        
 
-	<title>Node/Angular Todo App</title>
+    <div class="container-fluid animated fadeIn" style="margin-top: 1%;">
+        <div class= "row ">
 
-	<!-- SCROLLS -->
-	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"><!-- load bootstrap -->
-	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
-	<style>
-		html 					{ overflow-y:scroll; }
-		body 					{ padding-top:50px; }
-		#todo-list 				{ margin-bottom:30px; }
-		#todo-form 	 			{ margin-bottom:50px; }
-	</style>
+            <div class="col-md-4" style="margin-top: 10%;">
+            	<blockquote class="animated fadeIn">
+            		<p class="lead">Thank for utilizing GPS services.</p>
 
-	<!-- SPELLS -->
-	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script><!-- load angular -->
+				<p class="img-comment text-justify">To serve you better, we need your feedback of your experience using services. <br> Your input will help us improve our services to meet your ever growing business needs.</p>
 
-	<script src="js/controllers/main.js"></script> <!-- load up our controller -->
-	<script src="js/services/todos.js"></script> <!-- load our todo service -->
-	<script src="js/core.js"></script> <!-- load our main application -->
+				<p class="img-comment text-justify">To get a complete picture of your experience, we encourage you to provide feedback on every service you have used.</p>
 
-</head>
-<!-- SET THE CONTROLLER -->
-<body ng-controller="mainController">
-	<div class="container">
+				<p class="img-comment text-justify">As always, we look forward to continue to provide top-notch services and support.</p>
 
-		<!-- HEADER AND TODO COUNT -->
-		<div class="jumbotron text-center">
-			<h1>I'm a Todo-aholic <span class="label label-info">{{ todos.length }}</span></h1>
-		</div>
+				<small class="animated fadeIn">-Global Platform Services</small>
+            	</blockquote>
+            </div>
 
-		<!-- TODO LIST -->
-		<div id="todo-list" class="row">
-			<div class="col-sm-4 col-sm-offset-4">
+            <div class="col-md-8">
+            
+            <blockquote class="animated fadeIn"><p class="img-comment text-justify">Click on link below to take a survey. Once you complete it, you will have an option to come back and select another survey.</p></blockquote>
 
-				
+            	<div class="row demo-tiles">
+        <div class="col-xs-3">
+          <div class="tile">
+            <img src="img/icons/svg/messaging.svg" alt="Messaging" class="tile-image big-illustration animated tada">
+            <h3 class="tile-title"></h3>
+            <a class="btn btn-primary btn-large btn-block btn-inverse" href="#">Messaging</a>
+          </div>
+        </div>
 
-				<!-- LOOP OVER THE TODOS IN $scope.todos -->
-				<div class="checkbox" ng-repeat="todo in todos">
-					<label>
-						<input type="checkbox" ng-click="deleteTodo(todo._id)"> {{ todo.text }}
-					</label>
-				</div>
+        <div class="col-xs-3">
+          <div class="tile">
+            <img src="img/icons/svg/notifications.svg" alt="Notifications" class="tile-image animated tada">
+            <h3 class="tile-title"></h3>
+            <a class="btn btn-primary btn-large btn-block btn-inverse" href="#">Notifications</a>
+          </div>
+        </div>
 
-				<p class="text-center" ng-show="loading">
-					<span class="fa fa-spinner fa-spin fa-3x"></span>
-				</p>
+        <div class="col-xs-3">
+          <div class="tile">
+            <img src="img/icons/svg/mayfly.svg" alt="Mayfly" class="tile-image animated tada">
+            <h3 class="tile-title"></h3>
+            <a class="btn btn-primary btn-large btn-block btn-inverse" href="#">Mayfly</a>
+          </div>
+        </div>
 
-			</div>
-		</div>
+        <div class="col-xs-3">
+          <div class="tile">
+            <img src="img/icons/svg/occ.svg" alt="occ" class="tile-image animated tada">
+            <h3 class="tile-title"></h3>
+            <a class="btn btn-primary btn-large btn-block btn-inverse" href="#">OCC</a>
+          </div>
 
-		<!-- FORM TO CREATE TODOS -->
-		<div id="todo-form" class="row">
-			<div class="col-sm-8 col-sm-offset-2 text-center">
-				<form>
-					<div class="form-group">
+        </div>
+      </div>
 
-						<!-- BIND THIS VALUE TO formData.text IN ANGULAR -->
-						<input type="text" class="form-control input-lg text-center" placeholder="I want to buy a puppy that will love me forever" ng-model="formData.text">
-					</div>
+<div class="row demo-tiles">
+        <div class="col-xs-3">
+          <div class="tile">
+            <img src="img/icons/svg/monitoring.svg" alt="monitoring" class="tile-image big-illustration animated tada">
+            <h3 class="tile-title"></h3>
+            <a class="btn btn-primary btn-large btn-block btn-inverse" href="#">Sherlock Monitoring</a>
+          </div>
+        </div>
 
-					<!-- createToDo() WILL CREATE NEW TODOS -->
-					<button type="submit" class="btn btn-primary btn-lg" ng-click="createTodo()">Add</button>
-				</form>
-			</div>
-		</div>
+        <div class="col-xs-3">
+          <div class="tile">
+            <img src="img/icons/svg/content_ecat.svg" alt="content_ecat" class="tile-image animated tada">
+            <h3 class="tile-title"></h3>
+            <a class="btn btn-primary btn-large btn-block btn-inverse" href="#">Content-eCAT</a>
+          </div>
+        </div>
 
-		<div class="text-center text-muted">
-			<p>A demo by <a href="http://scotch.io">Scotch</a>.</p>
-			<p>Read the <a href="http://scotch.io/tutorials/javascript/creating-a-single-page-todo-app-with-node-and-angular">tutorial</a>.</p>
-		</div>
+        <div class="col-xs-3">
+          <div class="tile">
+            <img src="img/icons/svg/content_pisces.svg" alt="content_pisces" class="tile-image animated tada">
+            <h3 class="tile-title"></h3>
+            <a class="btn btn-primary btn-large btn-block btn-inverse" href="#">Content-Pisces</a>
+          </div>
+        </div>
 
-	</div>
+        </div>
+      </div>
 
-</body>
+            </div>
+        </div>
+    </div>
+        
+        <script src="/js/lib/jquery.min.js"></script>
+        <script src="/js/flat-ui.min.js"></script>
+        <script src="/js/app.js"></script>
+    </body>
 </html>
